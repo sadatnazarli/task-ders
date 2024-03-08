@@ -7,25 +7,24 @@
 
 //Cavab-> true
 
-int[] ciarr = {211, 9, -6,12,34,56,32,5,19};
-int[] ciArr = {11,-6, 33};
+int[] first = {211, 9, -6,12,34,56,32,5,19};
+int[] second = {211, 34 , 19};
 
-bool result = true;
-for (int i = 0; i < ciArr.Length; i++)
+bool result = false;
+for (int i = 0; i < second.Length; i++)
 {
-    bool isExist = false;
-    for (int j = 0; j < ciarr.Length; j++)
+    for (int j = 0; j < first.Length; j++)
     {
-        if (ciArr[i] == ciarr[j])
+        if (second[i] == first[j])
         {
-            isExist = true;
+            result = true;
             break;
         }
     }
-    if (!isExist)
+    if (!result)
     {
-        result = false;
         break;
     }
 }
+
 Console.WriteLine(result);
